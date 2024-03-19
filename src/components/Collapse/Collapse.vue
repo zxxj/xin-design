@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import { provide, ref } from 'vue'
-import type { NameType } from './types'
+import { provide, ref, watch } from 'vue'
+import type { NameType, CollapseEmits, CollapseProps } from './types'
 import { collapseContextKey } from './types'
 
 // 组件配置
@@ -14,14 +14,33 @@ defineOptions({
   name: 'XinCollapse'
 })
 
-const activeNames = ref<NameType[]>([])
+const props = defineProps<CollapseProps>()
+const emits = defineEmits<CollapseEmits>()
+
+const activeNames = ref<NameType[]>(props.modelValue)
+
+// 解决传入的数据被异步更新时组件内不更新的问题
+watch(
+  () => props.modelValue,
+  () => {
+    activeNames.value = props.modelValue
+  }
+)
 
 const handleItemClick = (name: NameType) => {
-  const index = activeNames.value.indexOf(name)
-  if (index > -1) {
-    activeNames.value.splice(index, 1)
+  // 开启手风琴模式时的处理逻辑
+  if (props.accordion) {
+    activeNames.value = [activeNames.value[0] === name ? '' : name]
   } else {
-    activeNames.value.push(name)
+    const index = activeNames.value.indexOf(name)
+    if (index > -1) {
+      activeNames.value.splice(index, 1)
+    } else {
+      activeNames.value.push(name)
+    }
+
+    emits('update:modalValue', activeNames.value)
+    emits('change', activeNames.value)
   }
 }
 

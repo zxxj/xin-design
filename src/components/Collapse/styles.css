@@ -1,0 +1,73 @@
+.xin-collapse {
+  --xin-collapse-border-color: var(--xin-border-color-light);
+  --xin-collapse-header-height: 48px;
+  --xin-collapse-header-bg-color: var(--xin-fill-color-blank);
+  --xin-collapse-header-text-color: var(--xin-text-color-primary);
+  --xin-collapse-header-font-size: 13px;
+  --xin-collapse-content-bg-color: var(--xin-fill-color-blank);
+  --xin-collapse-content-font-size: 13px;
+  --xin-collapse-content-text-color: var(--xin-text-color-primary);
+  --xin-collapse-disabled-text-color: var(--xin-disabled-text-color);
+  --xin-collapse-disabled-border-color: var(--xin-border-color-lighter);
+  border-top: 1px solid var(--xin-collapse-border-color);
+  border-bottom: 1px solid var(--xin-collapse-border-color);
+}
+.xin-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--xin-collapse-header-height);
+  line-height: var(--xin-collapse-header-height);
+  background-color: var(--xin-collapse-header-bg-color);
+  color: var(--xin-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--xin-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--xin-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--xin-collapse-border-color);
+  &.is-disabled {
+    color: var(--xin-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+    .header-angle {
+      transform: rotate(90deg);
+    }
+  }
+  .header-angle {
+    transition: transform var(--xin-transition-duration);
+  }
+}
+.xin-collapse-item__content {
+  will-change: height;
+  background-color: var(--xin-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--xin-collapse-content-font-size);
+  color: var(--xin-collapse-content-text-color);
+  border-bottom: 1px solid var(--xin-collapse-border-color);
+  padding-bottom: 25px;
+}
+/* .slide-enter-active,
+.slide-leave-active {
+  transition: height var(--xin-transition-duration);
+} */
+
+/* Transition组件动画配置 */
+/* .fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+} */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: height 0.3s ease-in-out;
+}
+
+/* .fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+} */

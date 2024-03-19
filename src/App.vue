@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import Button from './components/Button/Button.vue'
 import Collapse from './components/Collapse/Collapse.vue'
 import CollapseItem from './components/Collapse/CollapseItem.vue'
 import type { ButtonInstance } from './components/Button/types'
 
-onMounted(() => {
-  if (buttonRef.value) {
-    console.log(buttonRef.value.ref)
-  }
-})
+// Button
 const buttonRef = ref<ButtonInstance | null>(null)
+
+// Collapse
+const opendValue = ref(['one'])
 </script>
 
 <template>
   <!-- Button -->
   <div>
     <div>
+      普通按钮
       <Button ref="buttonRef">Default</Button>
 
       <Button ref="buttonRef" type="primary">Primary</Button>
@@ -31,6 +31,7 @@ const buttonRef = ref<ButtonInstance | null>(null)
     </div>
 
     <div class="plain-button">
+      朴素按钮
       <Button ref="buttonRef" plain>Default</Button>
 
       <Button ref="buttonRef" type="primary" plain>Primary</Button>
@@ -45,6 +46,7 @@ const buttonRef = ref<ButtonInstance | null>(null)
     </div>
 
     <div class="plain-button">
+      圆形按钮
       <Button ref="buttonRef" round>Default</Button>
 
       <Button ref="buttonRef" type="primary" round>Primary</Button>
@@ -59,6 +61,7 @@ const buttonRef = ref<ButtonInstance | null>(null)
     </div>
 
     <div class="plain-button">
+      禁用按钮
       <Button ref="buttonRef" disabled>Default</Button>
 
       <Button ref="buttonRef" type="primary" disabled>Primary</Button>
@@ -71,10 +74,25 @@ const buttonRef = ref<ButtonInstance | null>(null)
 
       <Button ref="buttonRef" type="danger" disabled>Danger</Button>
     </div>
+
+    <div class="plain-button">
+      按钮大小
+      <Button ref="buttonRef" size="small">Default</Button>
+
+      <Button ref="buttonRef" type="primary" size="small">Primary</Button>
+
+      <Button ref="buttonRef" type="success" size="small">Success</Button>
+
+      <Button ref="buttonRef" type="info" size="small">Info</Button>
+
+      <Button ref="buttonRef" type="warning" size="small">Warning</Button>
+
+      <Button ref="buttonRef" type="danger" size="small">Danger</Button>
+    </div>
   </div>
 
   <!-- Collapse -->
-  <Collapse>
+  <Collapse v-model="opendValue" accordion>
     <CollapseItem :name="'one'" :title="'one title'">
       <template #title>
         <div>one title</div>
@@ -92,6 +110,15 @@ const buttonRef = ref<ButtonInstance | null>(null)
         <div>this is two content!!!</div>
       </template>
     </CollapseItem>
+
+    <CollapseItem :name="'three'" :title="'three title'">
+      <template #content>
+        <div>three content</div>
+        <div>this is three content!!!</div>
+      </template>
+    </CollapseItem>
+
+    {{ opendValue }}
   </Collapse>
 </template>
 

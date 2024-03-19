@@ -3,6 +3,19 @@ import type { Ref, InjectionKey } from 'vue'
 export type NameType = string | number
 
 // 父组件中的配置项
+export interface CollapseProps {
+  modelValue: NameType[] // 传入v-model的户籍类型
+
+  // 是否开启手风琴模式
+  accordion?: boolean
+}
+
+// Collapse组件暴露的方法
+export interface CollapseEmits {
+  (e: 'update:modalValue', values: NameType[]): void
+  (e: 'change', values: NameType[]): void
+}
+
 export interface CollapseContext {
   activeNames: Ref<NameType[]>
 
