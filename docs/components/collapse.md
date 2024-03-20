@@ -36,10 +36,9 @@ description: Collapse 组件的文档
 
 ### Collapse Events
 
-| 事件名    | 说明             | 类型       |
-| --------- | ---------------- | ---------- |
-| click     | 切换当前活动面板 | `Function` |
-| accordion | 是否手风琴模式   | `boolean`  |
+| 事件名 | 说明             | 类型       |
+| ------ | ---------------- | ---------- |
+| click  | 切换当前活动面板 | `Function` |
 
 ### Collapse Slots
 
