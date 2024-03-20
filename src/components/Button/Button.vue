@@ -12,7 +12,7 @@
       'is-disabled': disabled
     }"
     :autofocus="autofocus"
-    :type="nativeType"
+    :nativeType="nativeType"
   >
     <!-- 按钮内容插槽 -->
     <slot></slot>
@@ -29,9 +29,10 @@ defineOptions({
 })
 
 // 为原生的按钮type设置一个默认值: button
-withDefaults(defineProps<ButtonProps>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button'
 })
+console.log(props)
 
 // 获取button实例
 const _ref = ref<HTMLButtonElement>()
