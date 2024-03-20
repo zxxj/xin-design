@@ -9,7 +9,7 @@ import type { ButtonInstance } from './components/Button/types'
 const buttonRef = ref<ButtonInstance | null>(null)
 
 // Collapse
-const opendValue = ref(['one'])
+const opendValue = ref([])
 </script>
 
 <template>
@@ -28,66 +28,6 @@ const opendValue = ref(['one'])
       <Button ref="buttonRef" type="warning">Warning</Button>
 
       <Button ref="buttonRef" type="danger">Danger</Button>
-    </div>
-
-    <div class="plain-button">
-      朴素按钮
-      <Button ref="buttonRef" plain>Default</Button>
-
-      <Button ref="buttonRef" type="primary" plain>Primary</Button>
-
-      <Button ref="buttonRef" type="success" plain>Success</Button>
-
-      <Button ref="buttonRef" type="info" plain>Info</Button>
-
-      <Button ref="buttonRef" type="warning" plain>Warning</Button>
-
-      <Button ref="buttonRef" type="danger" plain>Danger</Button>
-    </div>
-
-    <div class="plain-button">
-      圆形按钮
-      <Button ref="buttonRef" round>Default</Button>
-
-      <Button ref="buttonRef" type="primary" round>Primary</Button>
-
-      <Button ref="buttonRef" type="success" round>Success</Button>
-
-      <Button ref="buttonRef" type="info" round>Info</Button>
-
-      <Button ref="buttonRef" type="warning" round>Warning</Button>
-
-      <Button ref="buttonRef" type="danger" round>Danger</Button>
-    </div>
-
-    <div class="plain-button">
-      禁用按钮
-      <Button ref="buttonRef" disabled>Default</Button>
-
-      <Button ref="buttonRef" type="primary" disabled>Primary</Button>
-
-      <Button ref="buttonRef" type="success" disabled>Success</Button>
-
-      <Button ref="buttonRef" type="info" disabled>Info</Button>
-
-      <Button ref="buttonRef" type="warning" disabled>Warning</Button>
-
-      <Button ref="buttonRef" type="danger" disabled>Danger</Button>
-    </div>
-
-    <div class="plain-button">
-      按钮大小
-      <Button ref="buttonRef" size="small">Default</Button>
-
-      <Button ref="buttonRef" type="primary" size="small">Primary</Button>
-
-      <Button ref="buttonRef" type="success" size="small">Success</Button>
-
-      <Button ref="buttonRef" type="info" size="small">Info</Button>
-
-      <Button ref="buttonRef" type="warning" size="small">Warning</Button>
-
-      <Button ref="buttonRef" type="danger" size="small">Danger</Button>
     </div>
   </div>
 

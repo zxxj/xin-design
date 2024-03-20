@@ -12,7 +12,7 @@ export interface CollapseProps {
 
 // Collapse组件暴露的方法
 export interface CollapseEmits {
-  (e: 'update:modalValue', values: NameType[]): void
+  (e: 'update:modelValue', values: NameType[]): void
   (e: 'change', values: NameType[]): void
 }
 
