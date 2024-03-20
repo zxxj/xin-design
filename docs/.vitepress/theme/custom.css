@@ -1,0 +1,23 @@
+:root {
+  --xin-c-brand: var(--xin-color-primary);
+  --xin-c-brand-light: var(--xin-color-primary-light-3);
+  --xin-c-brand-lighter: var(--xin-color-primary-light-5);
+  --xin-c-brand-dark: var(--xin-color-primary-dark-2);
+  --xin-c-brand-darker: #265f99;
+
+  --component-preview-bg: var(--xin-code-block-bg);
+  --component-preview-soft: var(--xin-code-block-bg-light);
+}
+
+body {
+  color: var(--xin-c-text-1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--xin-c-text-1);
+}

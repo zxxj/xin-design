@@ -10,7 +10,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "postcss-color-mix": "^1.1.0",
@@ -27,6 +30,8 @@
     "@types/node": "^20.11.25",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.3",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/tsconfig": "^0.5.1",
@@ -36,6 +41,7 @@
     "prettier": "^3.0.3",
     "typescript": "~5.4.0",
     "vite": "^5.1.5",
+    "vitepress": "1.0.0-rc.45",
     "vue-tsc": "^2.0.6"
   }
 }
