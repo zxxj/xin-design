@@ -13,6 +13,7 @@ const opendValue = ref([])
 </script>
 
 <template>
+  <font-awesome-icon :icon="['fas', 'user-secret']" />
   <!-- Button -->
   <div>
     <div>
