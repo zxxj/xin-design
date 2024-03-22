@@ -1,0 +1,16 @@
+.xin-icon {
+	--xin-icon-color: inherit;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	fill: currentColor;
+	color: var(--xin-icon-color);
+	font-size: inherit;
+}
+
+@each $val in primary,info,success,warning,danger {
+	.xin-icon--$(val) {
+		--xin-icon-color: var(--xin-color-$(val));
+	}
+}

@@ -5,6 +5,9 @@ import Collapse from './components/Collapse/Collapse.vue'
 import CollapseItem from './components/Collapse/CollapseItem.vue'
 import type { ButtonInstance } from './components/Button/types'
 
+// Icon
+import Icon from './components/Icon/Icon.vue'
+
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
@@ -13,7 +16,6 @@ const opendValue = ref([])
 </script>
 
 <template>
-  <font-awesome-icon :icon="['fas', 'user-secret']" />
   <!-- Button -->
   <div>
     <div>
@@ -61,6 +63,17 @@ const opendValue = ref([])
 
     {{ opendValue }}
   </Collapse>
+
+  <!-- Icon -->
+  <Icon icon="user-secret" type="primary" color="#f00" />
+
+  <div>
+    <Button loading>测试按钮加载状态</Button>
+  </div>
+
+  <div>
+    <Button icon="user-secret">测试图标按钮</Button>
+  </div>
 </template>
 
 <style scoped>
