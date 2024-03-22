@@ -32,6 +32,12 @@ export interface ButtonProps {
 
   // 是否聚焦,原生Button
   autofocus?: boolean
+
+  // 按钮加载状态
+  loading?: boolean
+
+  // 按钮图标
+  icon?: string
 }
 
 // 原生按钮实例类型

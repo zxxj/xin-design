@@ -92,6 +92,7 @@
   [class*='vk-icon'] + span {
     margin-left: 6px;
   }
+
 }
 
 /* 使用postcss循环生成样式 */
