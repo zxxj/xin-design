@@ -16,6 +16,9 @@
     >
       <!-- 标题区域 -->
       <slot name="title">{{ title }}</slot>
+      <div>
+        <Icon icon="angle-right" class="header-angle" />
+      </div>
     </div>
 
     <!-- 内容区域 -->
@@ -33,6 +36,7 @@
 import { computed, inject } from 'vue'
 import { collapseContextKey } from './types'
 import type { CollapseItemProps } from './types'
+import Icon from '../Icon/Icon.vue'
 
 // 组件配置
 defineOptions({
