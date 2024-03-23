@@ -4,7 +4,7 @@ import Button from '../../../src/components/Button/Button.vue'
 
 <template>
   <div>
-    <Button size="large" loading>加载中</Button>
-    <Button size="small" loading>确定</Button>
+    <Button size="large" loading>Loading</Button>
+    <Button size="small" loading>Loading</Button>
   </div>
 </template>

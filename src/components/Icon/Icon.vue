@@ -6,7 +6,7 @@
     }"
     :style="customStyle"
   >
-    <FontAwesomeIcon v-bind="props" />
+    <FontAwesomeIcon v-bind="props" :size="props.size ? props.size : 'lg'" />
   </i>
 </template>
 

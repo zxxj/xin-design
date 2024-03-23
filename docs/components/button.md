@@ -31,7 +31,19 @@ description: Button 组件的文档
 
 ## 加载状态
 
+点击按钮来加载数据,并向用户反馈加载状态.
+
+通过设置`loading`属性为`true`来显示加载中状态.
+
 <preview path="../demo/Button/Loading.vue"></preview>
+
+## 图标按钮
+
+使用图标为按钮添加更多的含义,你也可以单独使用图标不添加文字来节省显示区域占用.
+
+使用`icon`属性来为按钮添加图标.您可以在我们的`fortawesome`图标库中找到所需图标.通过向右方添加`icon="xxx"`的方式来添加图标.
+
+<preview path="../demo/Button/Icon.vue"></preview>
 
 ## Button API
 

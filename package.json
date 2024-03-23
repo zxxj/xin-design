@@ -25,6 +25,7 @@
     "postcss-for": "^2.1.1",
     "postcss-nested": "^6.0.1",
     "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^1.4.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {

@@ -22,7 +22,12 @@
 
     <!-- 按钮图标 -->
     <template v-if="props.icon">
-      <Icon class="mr-10" :icon="props.icon" />
+      <Icon
+        :class="{
+          'mr-10': ButtonDefalutSlotIsEmpty
+        }"
+        :icon="props.icon"
+      />
     </template>
 
     <!-- 按钮内容插槽 -->
@@ -31,9 +36,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref, useSlots } from 'vue'
 import type { ButtonProps } from './types'
 import Icon from '../Icon/Icon.vue'
+
+// 判断是否传入了按钮文本内容,动态的给图表组件添加样式
+const ButtonDefalutSlotIsEmpty = ref(false)
+onMounted(() => {
+  ButtonDefalutSlotIsEmpty.value = useSlots()?.default ? true : false
+})
 
 // 组件的配置
 defineOptions({

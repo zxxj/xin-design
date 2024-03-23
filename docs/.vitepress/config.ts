@@ -32,7 +32,10 @@ export default defineConfig({
       },
       {
         text: 'Baisc 基础组件',
-        items: [{ text: 'Button 按钮', link: '/components/button.md' }]
+        items: [
+          { text: 'Button 按钮', link: '/components/button.md' },
+          { text: 'Icon 图标', link: '/components/icon.md' }
+        ]
       },
       {
         text: 'Data 数据展示',
