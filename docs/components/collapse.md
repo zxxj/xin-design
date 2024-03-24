@@ -50,11 +50,11 @@ description: Collapse 组件的文档
 
 ### Collapse Item Attributes
 
-| 属性名   | 说明       | 类型            | 默认值 |
-| -------- | ---------- | --------------- | ------ |
-| name     | 唯一标志符 | `string/number` |        |
-| title    | 面板标题   | `string`        | ""     |
-| disabled | 是否禁用   | `boolean`       | false  |
+| 属性名   | 说明       | 类型              | 默认值 |
+| -------- | ---------- | ----------------- | ------ |
+| name     | 唯一标志符 | `string` `number` |        |
+| title    | 面板标题   | `string`          | ""     |
+| disabled | 是否禁用   | `boolean`         | false  |
 
 ### Collapse Item Slot
 

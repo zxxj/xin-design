@@ -42,6 +42,10 @@ export default defineConfig({
         items: [{ text: 'Collapse 折叠面板', link: '/components/collapse.md' }]
       },
       {
+        text: 'Feedback 反馈组件',
+        items: [{ text: 'Tooltip 文字提示', link: '/components/tooltip.md' }]
+      },
+      {
         text: 'XinDesign设计与实现',
         items: [
           { text: '色彩系统', link: '/note/SystemColor.md' },

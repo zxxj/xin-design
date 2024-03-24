@@ -49,7 +49,6 @@ title: Icon 组件的设计与实现
 - `Icon.vue`组件
 - `style.css`样式
 - `types.ts`ts类型
-- `icon.test.tsx`测试文件
 
 ### types.ts
 
@@ -124,7 +123,7 @@ export interface FontAwesomeIconProps {
     :style="customStyle"
   >
     <!-- v-bind="props": 将父组件中传入的属性传入到FontAwesomeIcon,父组件未传值的属性默认为false,例如:spin -->
-    <FontAwesomeIcon v-bind="props" />
+    <FontAwesomeIcon v-bind="props" :size="props.size ? props.size : 'lg" />
   </i>
 </template>
 

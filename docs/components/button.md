@@ -51,8 +51,8 @@ description: Button 组件的文档
 
 | Name        | Description           | Type                                                   | Default |
 | ----------- | --------------------- | ------------------------------------------------------ | ------- |
-| size        | 按钮尺寸              | `enum` - `large\| small`                               | —       |
-| type        | 按钮类型              | `enum` - `primary\| success\| warning\| danger\| info` | —       |
+| size        | 按钮尺寸              | `enum` - `large` `small`                               | —       |
+| type        | 按钮类型              | `enum` - `primary` `success` `warning` `danger` `info` | —       |
 | plain       | 是否为朴素按钮        | `boolean`                                              | false   |
 | round       | 是否为圆角按钮        | `boolean`                                              | false   |
 | circle      | 是否为圆形按钮        | `boolean`                                              | false   |
@@ -60,4 +60,4 @@ description: Button 组件的文档
 | disabled    | 按钮是否为禁用状态    | `boolean`                                              | false   |
 | icon        | 图标组件              | `string`                                               | —       |
 | autofocus   | 原生 `autofocus` 属性 | `boolean`                                              | false   |
-| native-type | 原生`type`属性        | `enum` - `button\| submit\| reset`                     | button  |
+| native-type | 原生`type`属性        | `enum` - `button` `submit` `reset`                     | button  |

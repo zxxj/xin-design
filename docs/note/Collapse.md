@@ -85,7 +85,6 @@ const array = ref('1')
 - `CollapseItem.vue`子组件
 - `style.css`样式
 - `types.ts`ts类型
-- `collapse.test.tsx`测试文件
 
 ### types.ts
 
