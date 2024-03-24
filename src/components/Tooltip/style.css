@@ -1,0 +1,82 @@
+.xin-tooltip {
+  --xin-popover-bg-color: var(--xin-bg-color-overlay);
+  --xin-popover-font-size: var(--xin-font-size-base);
+  --xin-popover-border-color: var(--xin-border-color);
+  --xin-popover-padding: 8px;
+  --xin-popover-border-radius: 4px;
+  display: inline-block;
+}
+
+.xin-tooltip {
+  .xin-tooltip__popper {
+    background: var(--xin-popover-bg-color);
+    border-radius: var(--xin-popover-border-radius);
+    border: 1px solid var(--xin-popover-border-color);
+    padding: var(--xin-popover-padding);
+    color: var(--xin-text-color-regular);
+    line-height: 1.4;
+    text-align: justify;
+    font-size: var(--xin-popover-font-size);
+    box-shadow: var(--xin-box-shadow-light);
+    word-break: break-all;
+    box-sizing: border-box;
+    z-index: 1000;
+    #arrow,
+    #arrow::before {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      box-sizing: border-box;
+      background: var(--xin-popover-bg-color);
+    }
+    #arrow {
+      visibility: hidden;
+    }
+    #arrow::before {
+      visibility: visible;
+      content: '';
+      transform: rotate(45deg);
+    }
+    &[data-popper-placement^='top'] > #arrow {
+      bottom: -5px;
+    }
+
+    &[data-popper-placement^='bottom'] > #arrow {
+      top: -5px;
+    }
+
+    &[data-popper-placement^='left'] > #arrow {
+      right: -5px;
+    }
+
+    &[data-popper-placement^='right'] > #arrow {
+      left: -5px;
+    }
+    &[data-popper-placement^='top'] > #arrow::before {
+      border-right: 1px solid var(--xin-popover-border-color);
+      border-bottom: 1px solid var(--xin-popover-border-color);
+    }
+    &[data-popper-placement^='bottom'] > #arrow::before {
+      border-left: 1px solid var(--xin-popover-border-color);
+      border-top: 1px solid var(--xin-popover-border-color);
+    }
+    &[data-popper-placement^='left'] > #arrow::before {
+      border-right: 1px solid var(--xin-popover-border-color);
+      border-top: 1px solid var(--xin-popover-border-color);
+    }
+    &[data-popper-placement^='right'] > #arrow::before {
+      border-left: 1px solid var(--xin-popover-border-color);
+      border-bottom: 1px solid var(--xin-popover-border-color);
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity var(--xin-transition-duration);
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}
