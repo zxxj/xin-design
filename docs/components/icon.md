@@ -15,28 +15,28 @@ Xin Design的图标组件是基于Fontawesome图标库结合实现的.
 
 ## 图标类型
 
-使用 `type`属性来定义图标的样式.
+使用 `type` 属性来定义图标的样式.
 
 <preview path="../demo/Icon/Type.vue"></preview>
 
 ## 图标尺寸
 
-使用 `size`属性可以来定义图标尺寸的大小.
+使用 `size` 属性可以来定义图标尺寸的大小. 默认尺寸为 `lg`
 <preview path="../demo/Icon/Size.vue"></preview>
 
 ## 图标颜色
 
-使用 `color`属性可以来改变图标颜色,接收一个string类型的颜色值.
+使用 `color` 属性可以来改变图标颜色,接收一个string类型的颜色值.
 <preview path="../demo/Icon/Color.vue"></preview>
 
 ## 旋转图标
 
-使用 `spin`属性可以控制图标是否旋转,默认值为false.
+使用 `spin` 属性可以控制图标是否旋转,默认值为false.
 <preview path="../demo/Icon/Spin.vue"></preview>
 
 ## 图标名称
 
-使用 `title`属性可以定义图标的名称,鼠标放到图标上后有反馈效果.
+使用 `title` 属性可以定义图标的名称,鼠标放到图标上后有反馈效果.
 <preview path="../demo/Icon/Title.vue"></preview>
 
 ## Icon API

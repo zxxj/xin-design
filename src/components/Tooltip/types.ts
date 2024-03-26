@@ -24,6 +24,7 @@ export interface TooltipEmits {
   (e: 'visible-change', value: boolean): void
 }
 
+// Tooltip组件实例
 export interface TooltipInstance {
   showTooltip: () => void
   closeTooltip: () => void

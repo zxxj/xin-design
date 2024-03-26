@@ -46,6 +46,7 @@ const popperOptions = computed(() => {
 // 支持hover与click两种方式操作tooltip
 const events: Record<string, any> = ref({})
 
+// 将鼠标移出事件绑定到父元素上, 为了解决bug: 鼠标移动到tooltip内容上时,tooltip会消失的问题
 const outEvent: Record<string, any> = ref({})
 
 // 控制tooltip提示内容的显示与隐藏
@@ -95,9 +96,7 @@ const attachEvents = () => {
   }
 }
 
-// setup时执行
-// attachEvents()
-
+// 如果是用户控制,则不注册事件
 if (!props.manual) {
   attachEvents()
 }
@@ -141,13 +140,16 @@ watch(
   }
 )
 
+// 监听manual的变化,如果添加了manual表示用户要自己手动控制tooltip的显示与隐藏,这里需要绑定事件的条件做出判断
 watch(
   () => props.manual,
   (isManual) => {
+    // true: 用户自己控制显示与隐藏,则清空事件对象
     if (isManual) {
       events.value = {}
       outEvent.value = {}
     } else {
+      // false: 用户不控制,则正常注册事件
       attachEvents()
     }
   }
@@ -159,10 +161,9 @@ useClickOutside(containerNode, () => {
   }
 })
 
+// 将tooltip的显示与隐藏方法暴露出去
 defineExpose<TooltipInstance>({
   showTooltip: open,
   closeTooltip: close
 })
 </script>
-
-<style lang="scss" scoped></style>

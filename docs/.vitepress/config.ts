@@ -43,7 +43,8 @@ export default defineConfig({
         items: [
           { text: '色彩系统', link: '/note/SystemColor.md' },
           { text: 'Button 按钮', link: '/note/Button.md' },
-          { text: 'Collapse 折叠面板', link: '/note/Collapse.md' }
+          { text: 'Collapse 折叠面板', link: '/note/Collapse.md' },
+          { text: 'Icon 图标', link: '/note/Icon.md' }
         ]
       }
     ],

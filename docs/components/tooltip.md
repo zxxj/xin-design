@@ -15,6 +15,16 @@ description: Tootip 组件的文档
 
 <preview path="../demo/Tooltip/basic.vue"></preview>
 
+## 手动控制
+
+xin-tooltip支持手动控制Tooltip组件的显示和隐藏.
+
+首先,确保您已经将Tooltip设置为`manual`模式,否则无法实现手动控制.
+
+确保开启`manual`模式后,通过`Ref`获取Tooltip组件实例,实例中存有`showTooltip`与`closeTooltip`,分别是显示与隐藏方法.
+
+<preview path="../demo/Tooltip/manual.vue"></preview>
+
 ## 更多内容的文字提示
 
 展示多行文本或者是设置文本内容的格式.

@@ -26,6 +26,8 @@
   transition: border-bottom-color var(--xin-transition-duration);
   outline: none;
   border-bottom: 1px solid var(--xin-collapse-border-color);
+  font-weight: bold;
+
   &.is-disabled {
     color: var(--xin-collapse-disabled-text-color);
     cursor: not-allowed;
