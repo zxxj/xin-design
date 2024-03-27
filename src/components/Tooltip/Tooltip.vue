@@ -23,12 +23,16 @@ import { createPopper } from '@popperjs/core'
 import type { Instance } from '@popperjs/core'
 import { useClickOutside } from '../../hooks/useClicOutside'
 
+defineOptions({
+  name: 'XinTooltip'
+})
+
 const props = withDefaults(defineProps<TooltipProps>(), {
   // tooltip默认显示在下方
   placement: 'bottom',
 
   // 默认为hover触发
-  trigger: 'click',
+  trigger: 'hover',
 
   // 默认动画
   transition: 'fade'

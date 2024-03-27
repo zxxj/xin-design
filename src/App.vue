@@ -38,11 +38,11 @@ const opendValue = ref([])
 
 // Dropdown
 const menuOptions: MenuOption[] = [
-  { key: 1, label: h('h1', 'this is bold') },
-  { key: 2, label: 'item2', divided: true },
-  { key: 3, label: 'item3', divided: true },
-  { key: 4, label: 'item4' },
-  { key: 5, label: 'item5' }
+  { key: 1, label: 'Action1' },
+  { key: 2, label: 'Action2' },
+  { key: 3, label: 'Action3' },
+  { key: 4, label: 'Action4' },
+  { key: 5, label: 'Action5' }
 ]
 </script>
 
@@ -120,7 +120,7 @@ const menuOptions: MenuOption[] = [
 
     <!-- Dropdown -->
     <div style="color: red; margin: 20px 0">Dropdown</div>
-    <Dropdown :menu-options="menuOptions"> 123 </Dropdown>
+    <Dropdown :menu-options="menuOptions" trigger="click"> 123 </Dropdown>
   </div>
 </template>
 

@@ -40,8 +40,11 @@ import type { Ref } from 'vue'
 import type { TooltipInstance } from '../Tooltip/types'
 import type { DropdownInstance, DropdownProps, DropdownEmits, MenuOption } from './types'
 import Tooltip from '../Tooltip/Tooltip.vue'
-import RenderVnode from '@/hooks/RenderVnode'
+import RenderVnode from '../../hooks/RenderVnode'
 
+defineOptions({
+  name: 'XinDropdown'
+})
 const props = defineProps<DropdownProps>()
 const emits = defineEmits<DropdownEmits>()
 
@@ -50,7 +53,7 @@ const tooltipRef = ref() as Ref<TooltipInstance>
 
 // 监听tooltip的显示与隐藏事件
 const visibleChange = (e: boolean) => {
-  console.log('tooltip显示与隐藏状态', e)
+  // console.log('tooltip显示与隐藏状态', e)
 
   emits('visible-change', e)
 }
@@ -63,14 +66,14 @@ const itemClick = (item: MenuOption) => {
   // 如果不是禁用状态,点击之后则关闭tooltip
   tooltipRef.value.closeTooltip()
 
-  console.log(item)
+  // console.log(item)
   emits('select', item)
 }
 
 // 显示与隐藏dropdown
 defineExpose<DropdownInstance>({
-  showDropdown: tooltipRef.value?.showTooltip,
-  closeDropdown: tooltipRef.value?.closeTooltip
+  showDropdown: () => tooltipRef.value?.showTooltip(),
+  closeDropdown: () => tooltipRef.value?.closeTooltip()
 })
 </script>
 
