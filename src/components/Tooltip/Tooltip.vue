@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<TooltipProps>(), {
   placement: 'bottom',
 
   // 默认为hover触发
-  trigger: 'hover',
+  trigger: 'click',
 
   // 默认动画
   transition: 'fade'
