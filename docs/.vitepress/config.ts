@@ -39,6 +39,10 @@ export default defineConfig({
         items: [{ text: 'Tooltip 文字提示', link: '/components/tooltip.md' }]
       },
       {
+        text: 'Navigation 导航',
+        items: [{ text: 'Dropdown 下拉菜单', link: '/components/dropdown.md' }]
+      },
+      {
         text: 'XinDesign设计与实现',
         items: [
           { text: '色彩系统', link: '/note/SystemColor.md' },

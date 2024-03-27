@@ -21,3 +21,8 @@ h6,
 p {
   color: var(--xin-c-text-1);
 }
+
+.vp-doc ul {
+  padding-left: 0;
+  margin: unset;
+}
