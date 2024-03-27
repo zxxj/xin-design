@@ -15,7 +15,7 @@ Xin Design的图标组件是基于Fontawesome图标库结合实现的.
 
 ## 图标类型
 
-使用 `type` 属性来定义图标的样式.
+使用 `type` 属性来定义图标的类型.
 
 <preview path="../demo/Icon/Type.vue"></preview>
 
