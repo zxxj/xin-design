@@ -5,6 +5,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 // 1
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/xin-design',
   title: 'Xin Design',
   // description: '',
   vite: {
