@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 
+// 1
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Xin Design',
