@@ -38,21 +38,21 @@
       transform: rotate(45deg);
     }
 
-    &[data-popper-placement^='top']  {
-      margin: 0 0 10px 0 !important;
+    /* &[data-popper-placement^='top']  {
+      margin: 0 0 2px 0 !important;
     }
 
     &[data-popper-placement^='bottom']  {
-      margin: 10px 0 0 0 !important;
+      margin: 2px 0 0 0 !important;
     }
 
     &[data-popper-placement^='left'] {
-      margin: 0 10px 0 0 !important;
+      margin: 0 2px 0 0 !important;
     }
 
     &[data-popper-placement^='right'] {
-      margin: 0 0 0 10px !important;
-    }
+      margin: 0 0 0 5px !important;
+    } */
 
     &[data-popper-placement^='top'] > #arrow {
       bottom: -5px;
