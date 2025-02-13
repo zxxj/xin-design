@@ -55,6 +55,6 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/zxxJ/xin-design' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/zxxj/xin-design' }]
   }
 })
